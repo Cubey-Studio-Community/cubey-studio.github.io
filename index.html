@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cubey Studio - The ultimate IDE</title>
+    <link rel="icon" href="assets/Normal Version - Dark.svg" type="image/svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="assets/Normal Version - Dark.svg" alt="Cubey Studio Logo" width="64" height="64" onclick="window.open('https://symmetrical-space-pancake-r77r9jgxvv52qjq-5500.app.github.dev/')"></div>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#license">License</a></li>
+            </ul>
+        </nav>
+        <img src="assets/GitHub_Invertocat_White.svg" alt="Github White Logo" id="github-logo"/>
+    </header>
+
+    <h1>Cubey Studio</h1>
+    <p>Cubey Studio is a complete IDE like Visual Studio 2026 and Xcode but this IDE is more compatible in Windows than MacOS but soon will support a owned OS that is <strong>CubeyOS</strong>!</p>
+    <p>For CubeyOS Apps (it will be soon), the recommended language is <strong>CubeyLang</strong>! For a code, use this code:</p>
+    <div class="macos-window">
+        <div class="window-header">
+            <div class="buttons">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+            </div>
+            <div class="title">main.cby</div>
+        </div>
+        <pre><code class="language-cubeylang">
+require System
+
+&lt;System.outPrint&gt;:print("Hello World!")
+        </code></pre>
+    </div>
+    <p>For a app, use this code:</p>
+    <div class="macos-window">
+        <div class="window-header">
+            <div class="buttons">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+            </div>
+            <div class="title">main.cby</div>
+        </div>
+        <pre><code class="language-cubeylang">
+require CubeyStudio
+
+pub class MyApp = [extends CubeyStudio.App] start
+    fun Elements(var element) start
+	subvar element.text = new CubeyStudio.Elements.Text("Hello World! This is my button!", "h1")
+	subvar element.button = new CubeyStudio.Elements.Button("My Button!")
+    end
+end
+        </code></pre>
+    </div>
+
+	<p>Output/Window:</p>
+	<div class="macos-window">
+        <div class="window-header">
+            <div class="buttons">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+            </div>
+            <div class="title">main.cby - Preview</div>
+        </div>
+
+		<div class="window-content">
+			<h1>Hello World! This is my button!</h1>
+			<button>My Button!</button>
+		</div>
+	</div>
+
+    <h2>Features:</h2>
+    <ul>
+        <li>It's fast,</li>
+        <li>It's more compatible in Windows than in MacOS,</li>
+        <li>It's a complete IDE and</li>
+        <li>It has features that IDEs don't have!</li>
+    </ul>
+    <h3>"How the IDE was made?"</h3>
+    <p>Look, the IDE is made in <a href="https://rust-lang.org">Rust</a> with <a href="https://slint.dev">Slint</a>, which is, actully, the faster language than C++, which C++ is, actully, the 2nd language of the fastest languages</p>
+    <p>But for now, the IDE is web but after that, the IDE will be for Desktop.</p>
+    <p>But while IDE is in construction, we have the CubeyLang Playground!</p>
+    <button id="PlaygroundButton">Go to Playground</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

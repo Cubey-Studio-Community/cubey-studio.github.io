@@ -1,0 +1,208 @@
+@import url("https://db.onlinewebfonts.com/c/d9bfce6d55f637efe7d0e6c2b058bd00?family=Builder+Sans");
+@import url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css");
+
+/* 1. Global Reset - AVOID background-color in the universal selector (*) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #24252A; /* Move background here instead of * */
+    font-family: "Builder Sans", sans-serif;
+}
+
+/* 2. Header & Nav */
+header {
+    background-color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+li, a, button {
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links { list-style: none; }
+.nav__links li { display: inline-block; padding: 0px 20px; }
+.nav__links li a:hover { color: #007DFF; }
+
+/* 3. Typography */
+h1 { color: white; font-size: 50px; text-align: center; margin-top: 20px; }
+p { color: white; font-size: small; text-align: center; margin: 10px 0; }
+
+/* 4. MacOS Window Container */
+.macos-window {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: 300px;
+    display: flex;
+    max-width: 600px;
+    margin: 40px auto; /* Centers the window */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+}
+
+.window-header {
+    background: #333;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    z-index: 5; /* Ensures buttons stay above the title */
+}
+
+/* Specific dots styling */
+.buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close { background: #ff5f56 !important; }
+.minimize { background: #ffbd2e !important; }
+.maximize { background: #27c93f !important; }
+
+.window-header .title {
+    color: #999;
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    pointer-events: none;
+    background: transparent; /* Fix for your universal background rule */
+}
+
+pre[class*="language-"] {
+    flex-grow: 1; /* Fills the remaining space in the 200px window */
+    margin: 0 !important;
+    padding: 15px !important;
+    background: transparent !important;
+    
+    /* Both Horizontal and Vertical Scrolling */
+    overflow-x: auto !important; 
+    overflow-y: auto !important; 
+    
+    white-space: pre !important;
+}
+
+pre[class*="language-"], code[class*="language-"] {
+    font-family: 'Fira Code', monospace !important;
+    font-variant-ligatures: contextual;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 3. Style both scrollbars to keep it clean */
+pre[class*="language-"]::-webkit-scrollbar {
+    width: 6px;  /* Vertical width */
+    height: 6px; /* Horizontal height */
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* KEYWORDS & BOOLEANS: PINK */
+.token.keyword {
+    color: #ff60aa !important;
+    font-weight: bold !important;
+}
+
+/* FUNCTIONS & METHODS: YELLOW */
+.token.function,
+.token.method {
+    color: #FFFFAA !important;
+    font-weight: bold !important;
+}
+
+/* STRINGS: MINT GREEN */
+.token.string {
+    color: #90FFBB !important;
+}
+
+/* VARIABLES: DEEP BLUE */
+.token.variable {
+    color: #007DFF !important;
+    font-weight: bold !important;
+}
+
+/* CLASSES, ENUMS, IMPL, NAMESPACES: TEAL */
+.token.class-name,
+.token.namespace {
+    color: #50FFCC !important;
+    font-weight: bold !important;
+}
+
+/* PUNCTUATION: WHITE */
+.token.punctuation,
+.token.operator {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.window-content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto; /* Handles H and V scrolling */
+    background: white;
+}
+
+/* Custom Scrollbar to match the Dark Look */
+.window-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.window-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.window-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* Example internal styles */
+.window-content h1 { color: black; font-size: 1.2em; }
+.window-content p { color: black; }
+.window-content button { color: black; }
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 45px;
+}
+
+ul {
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+#PlaygroundButton {
+    background: #007DFF;
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 40px;
+    border: white solid 3.5px;
+}
