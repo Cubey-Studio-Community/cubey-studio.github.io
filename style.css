@@ -207,7 +207,7 @@ h3 {
     border: white solid 3.5px;
 }
 
-button {
+#licenseButton {
     background: #101010;
     width: 200px;
     height: 50px;
