@@ -10,7 +10,7 @@ Prism.languages.cubeylang = {
         greedy: true
     },
     // 1. KEYWORDS & TYPES: #ff60aa (Pink)
-    'keyword': /\b(?:var|fun|subvar|impl|if|else|elseif|then|for|from|while|do|start|end|when|pub|priv|prot|class|enum|new|del|mod|require|use|module|as|extends|switch|case|default|break|continue|this|try|catch|static|in|with|match|of|out|exit|define|true|false|Number|Decimal|String|Function|Boolean|null|Number\?|Decimal\?|String\?|Function\?|Boolean\?)\b/,
+    'keyword': /\b(?:var|fun|subvar|impl|if|else|elseif|then|for|from|while|do|start|end|when|pub|priv|prot|class|enum|new|del|mod|require|use|module|as|extends|switch|case|default|break|continue|this|try|catch|static|in|with|match|of|out|define|true|false|Number|Decimal|String|Function|Boolean|null|Number\?|Decimal\?|String\?|Function\?|Boolean\?)\b/,
 
     // 2. FUNCTIONS & CUSTOM FUNCTIONS: #FFFFAA (Yellow)
     // Matches any word immediately followed by '('
